@@ -1,1 +1,6 @@
-console.log("Hello i am javascript")
+console.log("Hello i am javascripts")
+const test=()=>{
+console.log("test is called")
+}
+
+test()
