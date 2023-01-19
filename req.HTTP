@@ -1,0 +1,16 @@
+GET http://localhost:3000/getusers
+
+###
+GET http://localhost:3000/getproducts
+
+###
+POST http://localhost:3000/createuser
+
+###
+POST http://localhost:3000/createproduct
+
+###
+PUT http://localhost:3000
+
+###
+DELETE http://localhost:3000
