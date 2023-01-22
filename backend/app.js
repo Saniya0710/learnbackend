@@ -3,6 +3,28 @@
 const { response } = require( 'express' )
 const exp = require('express')
 const app = exp();
+const mclient=require("mongodb").MongoClient;
+
+//DB connection URL
+const DBurl = "mongodb+srv://Saniya:saniya123@cluster0.e0zeff0.mongodb.net/?retryWrites=true&w=majority"
+
+//connect with mongoBB server
+mclient.connect(DBurl)
+.then((client)=>{
+
+    //get DB object
+    let dbObj=client.db("vnr2023db");
+   
+    //create collection objects
+    let userCollectionObj = dbObj.collection("usercollection");
+    let productCollectionObj = dbObj.collection("productcollection")
+    
+    //sharing collection objects to APIs
+    app.set("userCollectionObj", userCollectionObj)
+    app.set("productCollectionObj", productCollectionObj);
+
+})
+.catch(err=>console.log('Error in DB connection', err))
 
 //import userApp and productAPp
 const userApp=require('./APIS/userAPIS');
