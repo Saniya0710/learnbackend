@@ -1,21 +1,14 @@
-GET http://localhost:4000/getusers
+GET http://localhost:4000/user-api/getusers
 
 ###
-GET http://localhost:4000/getuser/3
+GET http://localhost:4000/user-api/getuser/3
 
 ###
-POST http://localhost:4000/create-user
-Content-Type: application/json
-
-{
-    "id":3,
-    "name":"Afshan",
-    "age":19
-}
+POST http://localhost:4000/user-api/create-user
 
 
 ###
-PUT http://localhost:4000/update-user
+PUT http://localhost:4000/user-api/update-user
 Content-Type: application/json
 
 {
@@ -25,15 +18,22 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:4000/remove-user/2
+DELETE http://localhost:4000/user-api/remove-user/2
 
 
 ###
-GET http://localhost:4000/getproducts
+GET http://localhost:4000/product-api/getproducts
 
 ###
-GET http://localhost:4000/getproduct/5
+GET http://localhost:4000/product-api/getproduct/5
 
 ###
-POST http://localhost:4000/create-product
+POST http://localhost:4000/product-api/create-product
+Content-Type: application/json
 
+{
+    "productId": 300,
+    "productName": "Mobile",
+    "brand": "i-Phone",
+    "price": 50000
+}
