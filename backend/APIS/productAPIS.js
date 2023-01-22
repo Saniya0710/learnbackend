@@ -19,27 +19,27 @@ productApp.get('/getproduct/:id', (request, response)=>{
     response.send({message: `product with id ${request.params.id}`})
 })
 
-//to create product using callback
-productApp.post('/create-product',(request,response)=>{
+// //to create product using callback
+// productApp.post('/create-product',(request,response)=>{
     
    
-    //  get prodctCollectionObject
-    let productCollectionObject = request.app.get("productCollectionObj")
+//     //  get prodctCollectionObject
+//     let productCollectionObject = request.app.get("productCollectionObj")
 
-    //get product obj from req
-    let productObj = request.body;
+//     //get product obj from req
+//     let productObj = request.body;
      
-    //insert productObj
-    productCollectionObject.insertOne(productObj,(err, result)=>{
-    if(err){
-                console.log("err in creating product", err)
-            }
-            else{
-                response.send({message:'product created successfully'})
-            }
+//     //insert productObj
+//     productCollectionObject.insertOne(productObj,(err, result)=>{
+//     if(err){
+//                 console.log("err in creating product", err)
+//             }
+//             else{
+//                 response.send({message:'product created successfully'})
+//             }
         
-})
-})
+// })
+// })
     
 
 
